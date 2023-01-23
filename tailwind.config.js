@@ -8,6 +8,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        mainBlack: "#202020",
+      },
       fontFamily: { sans: ["Open Sans", ...defaultTheme.fontFamily.sans] },
     },
   },

@@ -1,5 +1,6 @@
 {
-  "homepage": {
+  "homePage": {
+    "title": "Home",
     "hero": {
       "title": "Champagne Chaléroux-Ghys",
       "text": "We would be happy to welcome you personally in our estate for tasting but also to visit our cellar and share our passion"
@@ -16,5 +17,14 @@
       "title": "Feel free to contact us",
       "text": "Our activity is mostly focused on the wine making and less on the commercial work that comes with it. Therefor, we recommand you to send us an e-mail or to call us before your visit so that we can make ourselves available."
     }
+  },
+  "galleryPage": {
+    "title": "Gallery"
+  },
+  "productsPage": {
+    "title": "Our champagnes"
+  },
+  "legalPage": {
+    "title": "Legal Terms"
   }
 }

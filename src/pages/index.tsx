@@ -21,7 +21,7 @@ const IndexPage = () => {
   const PHONE_NUMBER = "06 48 71 50 64";
 
   const u = (
-    t("homepage.presentation.text", { returnObjects: true }) as string[]
+    t("homePage.presentation.text", { returnObjects: true }) as string[]
   ).map((p) => console.log(p));
   return (
     <Layout>
@@ -35,18 +35,18 @@ const IndexPage = () => {
           />
         </ParallaxBannerLayer>
         <div className="absolute inset-0 flex flex-col justify-center p-6 max-w-6xl mx-auto">
-          <h1 className="w-1/2 mb-10">{t("homepage.hero.title")}</h1>
+          <h1 className="w-1/2 mb-10">{t("homePage.hero.title")}</h1>
           <p className="w-1/2 text-white text-lg font-medium">
-            {t("homepage.hero.text")}
+            {t("homePage.hero.text")}
           </p>
         </div>
       </ParallaxBanner>
       <section className="space-y-20 max-w-6xl mx-auto">
         <article className="space-y-8">
-          <h2>{t("homepage.presentation.title")}</h2>
+          <h2>{t("homePage.presentation.title")}</h2>
           <div className="space-y-6">
             {(
-              t("homepage.presentation.text", {
+              t("homePage.presentation.text", {
                 returnObjects: true,
               }) as string[]
             ).map((p) => (
@@ -55,10 +55,10 @@ const IndexPage = () => {
           </div>
         </article>
         <article className="space-y-8">
-          <h2>{t("homepage.contact.title")}</h2>
+          <h2>{t("homePage.contact.title")}</h2>
           <div className="flex">
             <div className="flex flex-col space-y-4">
-              <p>{t("homepage.contact.text")}</p>
+              <p>{t("homePage.contact.text")}</p>
               <a
                 target="_blank"
                 rel="noopener noreferrer"
