@@ -20,9 +20,6 @@ const IndexPage = () => {
   const EMAIL = "earl.ghys@wanadoo.fr";
   const PHONE_NUMBER = "06 48 71 50 64";
 
-  const u = (
-    t("homePage.presentation.text", { returnObjects: true }) as string[]
-  ).map((p) => console.log(p));
   return (
     <Layout>
       <ParallaxBanner className="h-[32rem]">

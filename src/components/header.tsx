@@ -9,7 +9,7 @@ const Pages = [
 ];
 
 export default function Header() {
-  const { languages, originalPath, t } = useI18next();
+  const { languages, language, originalPath, t } = useI18next();
 
   return (
     <header className="text-white text-xl font-semibold bg-mainBlack">
@@ -17,24 +17,44 @@ export default function Header() {
         <Link to="/">
           <StaticImage src="../images/logo.png" alt="" className="h-14 w-14" />{" "}
         </Link>
-        <nav>
-          <ul className="flex space-x-8">
+        <nav className="flex space-x-12">
+          <ul className="flex space-x-6">
             {Pages.map((page) => (
               <li key={page.key} className="hover:text-mainDarkBrown">
                 <Link to={page.to}>{t(page.key)}</Link>
               </li>
             ))}
           </ul>
-        </nav>
-        <ul className="flex">
-          {languages.map((lng) => (
-            <li key={lng} className="hover:text-mainDarkBrown">
-              <Link to={originalPath} language={lng}>
-                {lng}
+          <div>
+            <span key={languages[0]}>
+              <Link
+                to={originalPath}
+                language={languages[0]}
+                className={`${
+                  language === languages[0]
+                    ? "text-mainBrown cursor-default"
+                    : "hover:text-mainDarkBrown"
+                }`}
+              >
+                {languages[0].toUpperCase()}
               </Link>
-            </li>
-          ))}
-        </ul>
+            </span>
+            <span> / </span>
+            <span key={languages[1]}>
+              <Link
+                to={originalPath}
+                language={languages[1]}
+                className={`${
+                  language === languages[1]
+                    ? "text-mainBrown cursor-default"
+                    : "hover:text-mainDarkBrown"
+                }`}
+              >
+                {languages[1].toUpperCase()}
+              </Link>
+            </span>
+          </div>
+        </nav>
       </div>
     </header>
   );
