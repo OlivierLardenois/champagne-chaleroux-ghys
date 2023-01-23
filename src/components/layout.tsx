@@ -6,6 +6,7 @@
  */
 
 import * as React from "react";
+import Header from "./header";
 
 type LayoutProps = {
   children?: React.ReactNode;
@@ -14,7 +15,7 @@ type LayoutProps = {
 const Layout = ({ children }: LayoutProps) => {
   return (
     <>
-      <header>header</header>
+      <Header />
       <main>{children}</main>
       <footer>footer</footer>
     </>
