@@ -39,6 +39,16 @@
     }
   },
   "legalPage": {
-    "title": "Mentions légales"
+    "title": "Mentions légales",
+    "editor": {
+      "title": "Ce site est édité par :",
+      "address": "EARL Michel Ghys dont le siège social est situé à 10 Rue des Gris, 51190 Avize",
+      "phoneNumber": "Téléphone : 06 48 71 50 64",
+      "mail": "Adresse de courrier électronique : earl.ghys@wanadoo.fr",
+      "chief": "Directeur de la publication : Benoit Chaléroux"
+    },
+    "hosting": {
+      "title": "Ce site est hébergé par :"
+    }
   }
 }

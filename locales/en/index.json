@@ -39,6 +39,16 @@
     }
   },
   "legalPage": {
-    "title": "Legal Terms"
+    "title": "Legal Terms",
+    "editor": {
+      "title": "This webiste is edited by:",
+      "address": "EARL Michel Ghys located at 10 Rue des Gris, 51190 Avize",
+      "phoneNumber": "Phone number: 06 48 71 50 64",
+      "mail": "Mail: earl.ghys@wanadoo.fr",
+      "chief": "Chief Editor: Benoit Chaléroux"
+    },
+    "hosting": {
+      "title": "This webiste is hosted by:"
+    }
   }
 }
