@@ -57,9 +57,9 @@ const IndexPage = () => {
             <StaticImage
               src="../images/family.jpg"
               alt=""
-              className="rounded-lg w-2/5"
+              className="rounded-lg flex-shrink-0 w-96"
             />
-            <div className="flex flex-col items-center space-y-6 w-3/5">
+            <div className="flex flex-col items-center space-y-6">
               <p>{t("homePage.contact.text")}</p>
               <a
                 target="_blank"
