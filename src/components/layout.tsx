@@ -1,11 +1,5 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.com/docs/how-to/querying-data/use-static-query/
- */
-
 import * as React from "react";
+import Footer from "./footer";
 import Header from "./header";
 
 type LayoutProps = {
@@ -14,11 +8,11 @@ type LayoutProps = {
 
 const Layout = ({ children }: LayoutProps) => {
   return (
-    <>
+    <div className="flex flex-col min-h-screen">
       <Header />
-      <main>{children}</main>
-      <footer>footer</footer>
-    </>
+      <main className="grow">{children}</main>
+      <Footer />
+    </div>
   );
 };
 
