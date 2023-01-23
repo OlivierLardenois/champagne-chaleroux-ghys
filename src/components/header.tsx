@@ -14,7 +14,9 @@ export default function Header() {
   return (
     <header className="text-white text-xl font-semibold bg-mainBlack">
       <div className="flex justify-between items-center p-3 max-w-6xl mx-auto">
-        <StaticImage src="../images/logo.png" alt="" className="h-14 w-14" />
+        <Link to="/">
+          <StaticImage src="../images/logo.png" alt="" className="h-14 w-14" />{" "}
+        </Link>
         <nav>
           <ul className="flex space-x-8">
             {Pages.map((page) => (
