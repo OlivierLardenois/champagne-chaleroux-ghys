@@ -18,7 +18,7 @@ export default function Header() {
         <nav>
           <ul className="flex space-x-8">
             {Pages.map((page) => (
-              <li key={page.key}>
+              <li key={page.key} className="hover:text-mainDarkBrown">
                 <Link to={page.to}>{t(page.key)}</Link>
               </li>
             ))}
@@ -26,7 +26,7 @@ export default function Header() {
         </nav>
         <ul className="flex">
           {languages.map((lng) => (
-            <li key={lng}>
+            <li key={lng} className="hover:text-mainDarkBrown">
               <Link to={originalPath} language={lng}>
                 {lng}
               </Link>

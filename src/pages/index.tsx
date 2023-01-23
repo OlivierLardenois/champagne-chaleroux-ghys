@@ -41,7 +41,7 @@ const IndexPage = () => {
           </p>
         </div>
       </ParallaxBanner>
-      <section className="space-y-20 max-w-6xl mx-auto">
+      <section className="space-y-20 py-20 max-w-6xl mx-auto">
         <article className="space-y-8">
           <h2>{t("homePage.presentation.title")}</h2>
           <div className="space-y-6">
@@ -56,34 +56,36 @@ const IndexPage = () => {
         </article>
         <article className="space-y-8">
           <h2>{t("homePage.contact.title")}</h2>
-          <div className="flex">
-            <div className="flex flex-col space-y-4">
+          <div className="flex space-x-10">
+            <StaticImage
+              src="../images/family.jpg"
+              alt=""
+              className="rounded-lg w-2/5"
+            />
+            <div className="flex flex-col items-center space-y-6 w-3/5">
               <p>{t("homePage.contact.text")}</p>
               <a
                 target="_blank"
                 rel="noopener noreferrer"
                 href="https://goo.gl/maps/kuQhNUTh4LGPJDn48"
-                className="flex flex-col p-6 text-center rounded-xl shadow-lg border max-w-[16rem] h-32"
+                className="card"
               >
-                <FontAwesomeIcon icon={faMapMarkedAlt} size="3x" />
+                <FontAwesomeIcon
+                  icon={faMapMarkedAlt}
+                  size="3x"
+                  className="mb-2"
+                />
                 {ADDRESS}
               </a>
-              <a
-                href={`tel:+${PHONE_NUMBER}`}
-                className="flex flex-col p-6 text-center rounded-xl shadow-lg border max-w-[16rem] h-32"
-              >
-                <FontAwesomeIcon icon={faPhone} size="3x" />
+              <a href={`tel:+${PHONE_NUMBER}`} className="card">
+                <FontAwesomeIcon icon={faPhone} size="3x" className="mb-2" />
                 {PHONE_NUMBER}
               </a>
-              <a
-                href={`mailto:${EMAIL}`}
-                className="flex flex-col p-6 text-center rounded-xl shadow-lg border max-w-[16rem] h-32"
-              >
-                <FontAwesomeIcon icon={faEnvelope} size="3x" />
+              <a href={`mailto:${EMAIL}`} className="card">
+                <FontAwesomeIcon icon={faEnvelope} size="3x" className="mb-2" />
                 {EMAIL}
               </a>
             </div>
-            <StaticImage src="../images/family.jpg" alt="" />
           </div>
         </article>
       </section>

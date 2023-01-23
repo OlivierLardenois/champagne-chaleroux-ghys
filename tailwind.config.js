@@ -10,6 +10,8 @@ module.exports = {
     extend: {
       colors: {
         mainBlack: "#202020",
+        mainBrown: "#ae7743",
+        mainDarkBrown: "#8c572c",
       },
       fontFamily: { sans: ["Open Sans", ...defaultTheme.fontFamily.sans] },
     },

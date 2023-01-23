@@ -3,15 +3,21 @@
 @tailwind utilities;
 
 @layer base {
+  body {
+    @apply text-lg;
+  }
+
   h1 {
-    @apply text-white;
-    @apply font-bold;
-    @apply text-6xl;
+    @apply text-white font-bold text-6xl;
   }
 
   h2 {
-    @apply font-bold;
-    @apply text-4xl;
-    @apply tracking-tight;
+    @apply font-bold text-4xl tracking-tight text-mainBrown;
+  }
+}
+
+@layer components {
+  .card {
+    @apply flex flex-col p-4 text-center rounded-xl shadow-lg border w-64 hover:text-mainDarkBrown hover:bg-slate-50;
   }
 }
