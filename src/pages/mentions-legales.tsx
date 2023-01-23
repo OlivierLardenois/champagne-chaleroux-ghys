@@ -10,7 +10,7 @@ export default function LegalPage() {
 
   return (
     <Layout>
-      <section className="py-20 space-y-20 max-w-6xl mx-auto">
+      <section className="py-20 space-y-20 px-12 max-w-6xl mx-auto">
         <article className="space-y-8">
           <h2>{t("legalPage.editor.title")}</h2>
           <p>

@@ -13,7 +13,7 @@ export default function Header() {
 
   return (
     <header className="text-white text-xl font-semibold bg-mainBlack">
-      <div className="flex justify-between items-center p-3 max-w-6xl mx-auto">
+      <div className="flex justify-between items-center py-3 px-12 max-w-6xl mx-auto">
         <Link to="/">
           <StaticImage src="../images/logo.png" alt="" className="h-14 w-14" />{" "}
         </Link>

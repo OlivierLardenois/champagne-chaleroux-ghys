@@ -11,12 +11,12 @@ export default function ProductsPage() {
 
   return (
     <Layout>
-      <section className="py-20 space-y-20 max-w-6xl mx-auto">
+      <section className="py-20 space-y-20 px-12 max-w-6xl mx-auto">
         <article className="flex bg-mainBlack rounded-xl text-white">
           <StaticImage
             src="../images/brut.jpg"
             alt=""
-            className="shrink-0 w-80 h-96 rounded-l-xl"
+            className="shrink-0 w-80 lg:h-96 rounded-l-xl"
           />
           <div className="space-y-6 p-8">
             <h2>{t("productsPage.champagnes.brut.title")}</h2>
@@ -31,14 +31,14 @@ export default function ProductsPage() {
           <StaticImage
             src="../images/millesime.jpg"
             alt=""
-            className="shrink-0 w-80 h-96 rounded-r-xl"
+            className="shrink-0 w-80 lg:h-96 rounded-r-xl"
           />
         </article>
         <article className="flex bg-mainBlack rounded-xl text-white">
           <StaticImage
             src="../images/rose.jpg"
             alt=""
-            className="shrink-0 w-80 h-96 rounded-l-xl"
+            className="shrink-0 w-80 lg:h-96 rounded-l-xl"
           />
           <div className="space-y-6 p-8">
             <h2>{t("productsPage.champagnes.rose.title")}</h2>

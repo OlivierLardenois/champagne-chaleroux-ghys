@@ -8,7 +8,7 @@ export default function Footer() {
 
   return (
     <footer className="text-white text-xl font-semibold bg-mainBlack">
-      <div className="flex justify-between items-center p-3 max-w-6xl mx-auto">
+      <div className="flex justify-between items-center py-3 px-12 max-w-6xl mx-auto">
         <nav>
           <Link to="/mentions-legales" className="hover:text-mainDarkBrown">
             {t("legalPage.title")}
