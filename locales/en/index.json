@@ -1,4 +1,20 @@
 {
-  "hello_world": "Hello World",
-  "Hi people": "Hello"
+  "homepage": {
+    "hero": {
+      "title": "Champagne Chaléroux-Ghys",
+      "text": "We would be happy to welcome you personally in our estate for tasting but also to visit our cellar and share our passion"
+    },
+    "presentation": {
+      "title": "Come and visit our vineyard and cellar!",
+      "text": [
+        "Our vineyard is 4 hectares big. It is situated all around the \"Grand Cru\" villages of Avize and Oger. In this area, the only grape variety growing is Chardonnay. In our vineyards, which are approximatelly 50 years old, we maintain a sustainable agriculture by the association of both tradition and respect of the environment.",
+        "In our cellar, we make the wine through an artisanal production (no filtration and very few automation of the equipment). Furthermore, we do a particularly long \"élevage sur latte\" which means that after the second fermentation, the bottles lay down in the cellar for no less than 10 years. During this process, the dead yeasts that remain in the bottle are going to decay and give to wine a unique taste. This means new aroma, better champagne foam and a full bodied wine.",
+        "Thus, we introduce to you a very unique vintage wine \"blanc de blanc\" recognizable by its toasted aroma and brioche flavours."
+      ]
+    },
+    "contact": {
+      "title": "Feel free to contact us",
+      "text": "Our activity is mostly focused on the wine making and less on the commercial work that comes with it. Therefor, we recommand you to send us an e-mail or to call us before your visit so that we can make ourselves available."
+    }
+  }
 }

@@ -1,6 +1,14 @@
+import {
+  faEnvelope,
+  faMapMarkedAlt,
+  faPhone,
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { graphql } from "gatsby";
+import { StaticImage } from "gatsby-plugin-image";
 import { useTranslation } from "gatsby-plugin-react-i18next";
 import * as React from "react";
+import { ParallaxBanner, ParallaxBannerLayer } from "react-scroll-parallax";
 
 import Layout from "../components/layout";
 import Seo from "../components/seo";
@@ -8,9 +16,77 @@ import Seo from "../components/seo";
 const IndexPage = () => {
   const { t } = useTranslation();
 
+  const ADDRESS = "10 Rue des Gris, 51190 Avize";
+  const EMAIL = "earl.ghys@wanadoo.fr";
+  const PHONE_NUMBER = "06 48 71 50 64";
+
+  const u = (
+    t("homepage.presentation.text", { returnObjects: true }) as string[]
+  ).map((p) => console.log(p));
   return (
     <Layout>
-      <h1>{t("hello_world")}</h1>
+      <ParallaxBanner className="h-[32rem]">
+        <ParallaxBannerLayer speed={-20}>
+          <StaticImage
+            src="../images/hero.jpg"
+            alt=""
+            layout="fullWidth"
+            className="h-[46rem]"
+          />
+        </ParallaxBannerLayer>
+        <div className="absolute inset-0 flex flex-col justify-center p-6 max-w-6xl mx-auto">
+          <h1 className="w-1/2 mb-10">{t("homepage.hero.title")}</h1>
+          <p className="w-1/2 text-white text-lg font-medium">
+            {t("homepage.hero.text")}
+          </p>
+        </div>
+      </ParallaxBanner>
+      <section className="space-y-20 max-w-6xl mx-auto">
+        <article className="space-y-8">
+          <h2>{t("homepage.presentation.title")}</h2>
+          <div className="space-y-6">
+            {(
+              t("homepage.presentation.text", {
+                returnObjects: true,
+              }) as string[]
+            ).map((p) => (
+              <p>{p}</p>
+            ))}
+          </div>
+        </article>
+        <article className="space-y-8">
+          <h2>{t("homepage.contact.title")}</h2>
+          <div className="flex">
+            <div className="flex flex-col space-y-4">
+              <p>{t("homepage.contact.text")}</p>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://goo.gl/maps/kuQhNUTh4LGPJDn48"
+                className="flex flex-col p-6 text-center rounded-xl shadow-lg border max-w-[16rem] h-32"
+              >
+                <FontAwesomeIcon icon={faMapMarkedAlt} size="3x" />
+                {ADDRESS}
+              </a>
+              <a
+                href={`tel:+${PHONE_NUMBER}`}
+                className="flex flex-col p-6 text-center rounded-xl shadow-lg border max-w-[16rem] h-32"
+              >
+                <FontAwesomeIcon icon={faPhone} size="3x" />
+                {PHONE_NUMBER}
+              </a>
+              <a
+                href={`mailto:${EMAIL}`}
+                className="flex flex-col p-6 text-center rounded-xl shadow-lg border max-w-[16rem] h-32"
+              >
+                <FontAwesomeIcon icon={faEnvelope} size="3x" />
+                {EMAIL}
+              </a>
+            </div>
+            <StaticImage src="../images/family.jpg" alt="" />
+          </div>
+        </article>
+      </section>
     </Layout>
   );
 };
