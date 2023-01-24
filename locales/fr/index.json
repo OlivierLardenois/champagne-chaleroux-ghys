@@ -24,7 +24,19 @@
     }
   },
   "galleryPage": {
-    "title": "Galerie"
+    "title": "Galerie",
+    "alts": [
+      "Cave familiale avec des bouteilles sur lattes",
+      "Entrée de la cave familiale",
+      "Bouteilles de champagne présentées sur une table dans salle principale de la cave familiale",
+      "Salle principale de la cave familiale avec des bouteilles sur lattes",
+      "Salle principale de la cave familiale",
+      "Cuverie",
+      "Machine de tirage",
+      "Fût de champagne Chaléroux-Ghys",
+      "Vignes",
+      "Vignes"
+    ]
   },
   "productsPage": {
     "title": "Nos champagnes",

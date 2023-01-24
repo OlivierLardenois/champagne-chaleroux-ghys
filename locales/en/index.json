@@ -24,7 +24,19 @@
     }
   },
   "galleryPage": {
-    "title": "Gallery"
+    "title": "Gallery",
+    "alts": [
+      "Family cellar with bottles on slats",
+      "Entrance to the family cellar",
+      "Bottles of champagne displayed on a table in the main room of the family cellar",
+      "Main room of the family cellar with bottles on slats",
+      "Main room of the family cellar",
+      "Winery",
+      "Bottling",
+      "Chaléroux-Ghys champagne cask",
+      "Vineyards",
+      "Vineyards"
+    ]
   },
   "productsPage": {
     "title": "Our champagnes",

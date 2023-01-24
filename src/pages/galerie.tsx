@@ -1,5 +1,6 @@
 import { graphql, PageProps } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { useTranslation } from "gatsby-plugin-react-i18next";
 import * as React from "react";
 
 import Layout from "../components/layout";
@@ -8,6 +9,8 @@ import Seo from "../components/seo";
 export default function GalleryPage({
   data,
 }: PageProps<Queries.GalleryPageQuery>) {
+  const { t } = useTranslation();
+
   const images = [...data.galleryImages.nodes].sort(function (a, b) {
     return a.name.localeCompare(b.name, undefined, {
       numeric: true,
@@ -29,7 +32,11 @@ export default function GalleryPage({
 
             // https://tailwindcss.com/docs/content-configuration#dynamic-class-names
             return (
-              <GatsbyImage image={gatsbyImageData} alt="" className="h-1/5" />
+              <GatsbyImage
+                image={gatsbyImageData}
+                alt={t(`galleryPage.alts.${i}`)}
+                className="h-1/5"
+              />
             );
           })}
         </div>
@@ -43,7 +50,11 @@ export default function GalleryPage({
             if (!gatsbyImageData) return null;
 
             return (
-              <GatsbyImage image={gatsbyImageData} alt="" className="h-1/5" />
+              <GatsbyImage
+                image={gatsbyImageData}
+                alt={t(`galleryPage.alts.${i}`)}
+                className="h-1/5"
+              />
             );
           })}
         </div>
