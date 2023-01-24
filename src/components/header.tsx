@@ -8,8 +8,12 @@ const Pages = [
   { key: "galleryPage.title", to: "/galerie/" },
 ];
 
-const HamburgerMenu = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+type HamburgerMenuProps = {
+  isMenuOpen: boolean;
+  setIsMenuOpen: Function;
+};
+
+const HamburgerMenu = ({ isMenuOpen, setIsMenuOpen }: HamburgerMenuProps) => {
   const { languages, language, originalPath, t } = useI18next();
 
   return (
@@ -127,7 +131,12 @@ const HeadersLinks = () => {
   );
 };
 
-export default function Header() {
+type HeaderProps = {
+  isMenuOpen: boolean;
+  setIsMenuOpen: Function;
+};
+
+export default function Header({ isMenuOpen, setIsMenuOpen }: HeaderProps) {
   return (
     <header className="text-white text-xl font-semibold bg-mainBlack">
       <div className="flex justify-between items-center py-3 px-12 max-w-6xl mx-auto">
@@ -135,7 +144,7 @@ export default function Header() {
           <StaticImage src="../images/logo.png" alt="" className="h-14 w-14" />{" "}
         </Link>
         <HeadersLinks />
-        <HamburgerMenu />
+        <HamburgerMenu isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
       </div>
     </header>
   );

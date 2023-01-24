@@ -7,9 +7,15 @@ type LayoutProps = {
 };
 
 const Layout = ({ children }: LayoutProps) => {
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+
   return (
-    <div className="flex flex-col min-h-screen">
-      <Header />
+    <div
+      className={`flex flex-col min-h-screen ${
+        isMenuOpen ? "h-screen overflow-hidden" : ""
+      }`}
+    >
+      <Header isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
       <main className="grow">{children}</main>
       <Footer />
     </div>
