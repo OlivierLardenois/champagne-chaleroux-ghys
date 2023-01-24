@@ -40,48 +40,49 @@ const HamburgerMenu = ({ isMenuOpen, setIsMenuOpen }: HamburgerMenuProps) => {
           }`}
         ></span>
       </div>
-      {/* // Change this : stop use padding, make this max-height and center */}
       <nav
         className={`fixed inset-0 bg-mainBlack h-screen transition-transform ease-in-out duration-500 ${
           isMenuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <ul className="flex flex-col justify-between items-center text-center py-20 px-12 h-full text-4xl">
-          {Pages.map((page) => (
-            <li key={page.key} className="hover:text-mainDarkBrown">
-              <Link to={page.to}>{t(page.key)}</Link>
+        <div className="flex justify-center items-center h-full">
+          <ul className="flex flex-col justify-between h-full max-h-[32rem] text-center text-4xl p-6">
+            {Pages.map((page) => (
+              <li key={page.key} className="hover:text-mainDarkBrown">
+                <Link to={page.to}>{t(page.key)}</Link>
+              </li>
+            ))}
+            <li>
+              <span>
+                <Link
+                  to={originalPath}
+                  language={languages[0]}
+                  className={`${
+                    language === languages[0]
+                      ? "text-mainBrown cursor-default"
+                      : "hover:text-mainDarkBrown"
+                  }`}
+                >
+                  {languages[0].toUpperCase()}
+                </Link>
+              </span>
+              <span> / </span>
+              <span>
+                <Link
+                  to={originalPath}
+                  language={languages[1]}
+                  className={`${
+                    language === languages[1]
+                      ? "text-mainBrown cursor-default"
+                      : "hover:text-mainDarkBrown"
+                  }`}
+                >
+                  {languages[1].toUpperCase()}
+                </Link>
+              </span>
             </li>
-          ))}
-          <li>
-            <span>
-              <Link
-                to={originalPath}
-                language={languages[0]}
-                className={`${
-                  language === languages[0]
-                    ? "text-mainBrown cursor-default"
-                    : "hover:text-mainDarkBrown"
-                }`}
-              >
-                {languages[0].toUpperCase()}
-              </Link>
-            </span>
-            <span> / </span>
-            <span>
-              <Link
-                to={originalPath}
-                language={languages[1]}
-                className={`${
-                  language === languages[1]
-                    ? "text-mainBrown cursor-default"
-                    : "hover:text-mainDarkBrown"
-                }`}
-              >
-                {languages[1].toUpperCase()}
-              </Link>
-            </span>
-          </li>
-        </ul>
+          </ul>
+        </div>
       </nav>
     </div>
   );
