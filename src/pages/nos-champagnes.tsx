@@ -11,7 +11,7 @@ export default function ProductsPage() {
 
   return (
     <Layout>
-      <section className="py-20 space-y-20 px-12 max-w-6xl mx-auto">
+      <section className="space-y-20 custom-container">
         <article className="flex flex-col sm:flex-row bg-mainBlack rounded-xl text-white">
           <StaticImage
             src="../images/brut.jpg"

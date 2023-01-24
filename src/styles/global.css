@@ -20,4 +20,8 @@
   .card {
     @apply flex flex-col p-4 text-center rounded-xl shadow-lg border hover:text-mainDarkBrown hover:bg-slate-50;
   }
+
+  .custom-container {
+    @apply px-6 py-12 max-w-6xl mx-auto;
+  }
 }

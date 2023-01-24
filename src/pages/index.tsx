@@ -22,6 +22,7 @@ const IndexPage = () => {
 
   return (
     <Layout>
+      {/* // Change this */}
       <ParallaxBanner className="md:h-[32rem]">
         <ParallaxBannerLayer speed={-20}>
           <StaticImage
@@ -31,14 +32,14 @@ const IndexPage = () => {
             className="h-[46rem]"
           />
         </ParallaxBannerLayer>
-        <div className="absolute inset-0 flex flex-col justify-center px-12 max-w-6xl mx-auto">
+        <div className="absolute inset-0 flex flex-col justify-center px-6 max-w-6xl mx-auto">
           <h1 className="w-1/2 mb-10">{t("homePage.hero.title")}</h1>
           <p className="w-1/2 text-white text-lg font-medium">
             {t("homePage.hero.text")}
           </p>
         </div>
       </ParallaxBanner>
-      <section className="space-y-20 py-20 px-12 max-w-6xl mx-auto">
+      <section className="space-y-20 custom-container">
         <article className="space-y-8">
           <h2>{t("homePage.presentation.title")}</h2>
           <div className="space-y-6">

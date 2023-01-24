@@ -40,6 +40,7 @@ const HamburgerMenu = ({ isMenuOpen, setIsMenuOpen }: HamburgerMenuProps) => {
           }`}
         ></span>
       </div>
+      {/* // Change this : stop use padding, make this max-height and center */}
       <nav
         className={`fixed inset-0 bg-mainBlack h-screen transition-transform ease-in-out duration-500 ${
           isMenuOpen ? "translate-x-0" : "translate-x-full"

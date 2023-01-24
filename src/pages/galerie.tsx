@@ -17,7 +17,7 @@ export default function GalleryPage({
 
   return (
     <Layout>
-      <section className="flex flex-col sm:flex-row sm:space-x-2 space-y-2 sm:space-y-0 sm:py-20 sm:px-12 max-w-6xl mx-auto">
+      <section className="flex flex-col sm:flex-row sm:space-x-2 space-y-2 sm:space-y-0 sm:py-2 max-w-6xl mx-auto">
         <div className="flex flex-col space-y-2">
           {images.map((image, i) => {
             if (i % 2 === 1) return null;
