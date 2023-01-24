@@ -27,12 +27,9 @@ export default function GalleryPage({
             );
             if (!gatsbyImageData) return null;
 
+            // https://tailwindcss.com/docs/content-configuration#dynamic-class-names
             return (
-              <GatsbyImage
-                image={gatsbyImageData}
-                alt=""
-                className={`h-1/${Math.floor((images.length + 1) / 2)}`}
-              />
+              <GatsbyImage image={gatsbyImageData} alt="" className="h-1/5" />
             );
           })}
         </div>
@@ -46,11 +43,7 @@ export default function GalleryPage({
             if (!gatsbyImageData) return null;
 
             return (
-              <GatsbyImage
-                image={gatsbyImageData}
-                alt=""
-                className={`h-1/${Math.ceil((images.length + 1) / 2)}`}
-              />
+              <GatsbyImage image={gatsbyImageData} alt="" className="h-1/5" />
             );
           })}
         </div>
