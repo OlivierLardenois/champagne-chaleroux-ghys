@@ -13,6 +13,13 @@ import { ParallaxBanner, ParallaxBannerLayer } from "react-scroll-parallax";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
 
+/** TODO
+ * Alt images
+ * SEO component
+ * Analytics
+ * Perf test
+ */
+
 const IndexPage = () => {
   const { t } = useTranslation();
 
@@ -22,19 +29,18 @@ const IndexPage = () => {
 
   return (
     <Layout>
-      {/* // Change this */}
-      <ParallaxBanner className="md:h-[32rem]">
+      <ParallaxBanner className="h-[92vh] sm:h-[32rem]">
         <ParallaxBannerLayer speed={-20}>
           <StaticImage
             src="../images/hero.jpg"
             alt=""
             layout="fullWidth"
-            className="h-[46rem]"
+            className="h-full"
           />
         </ParallaxBannerLayer>
-        <div className="absolute inset-0 flex flex-col justify-center px-6 max-w-6xl mx-auto">
-          <h1 className="w-1/2 mb-10">{t("homePage.hero.title")}</h1>
-          <p className="w-1/2 text-white text-lg font-medium">
+        <div className="absolute inset-0 flex flex-col text-center sm:text-start justify-center px-6 max-w-6xl mx-auto">
+          <h1 className="sm:w-1/2 mb-10">{t("homePage.hero.title")}</h1>
+          <p className="sm:w-1/2 text-white text-lg font-medium">
             {t("homePage.hero.text")}
           </p>
         </div>
