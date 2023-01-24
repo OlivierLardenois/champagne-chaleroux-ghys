@@ -22,7 +22,7 @@ const IndexPage = () => {
 
   return (
     <Layout>
-      <ParallaxBanner className="h-[32rem]">
+      <ParallaxBanner className="md:h-[32rem]">
         <ParallaxBannerLayer speed={-20}>
           <StaticImage
             src="../images/hero.jpg"
@@ -53,35 +53,41 @@ const IndexPage = () => {
         </article>
         <article className="space-y-8">
           <h2>{t("homePage.contact.title")}</h2>
-          <div className="flex space-x-10">
+          <div className="flex flex-col sm:flex-row space-y-6 sm:space-y-0 sm:space-x-10">
             <StaticImage
               src="../images/family.jpg"
               alt=""
-              className="rounded-lg flex-shrink-0 w-96"
+              className="rounded-lg sm:min-w-[18rem] lg:min-w-[24rem]"
             />
             <div className="flex flex-col items-center space-y-6">
               <p>{t("homePage.contact.text")}</p>
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://goo.gl/maps/kuQhNUTh4LGPJDn48"
-                className="card"
-              >
-                <FontAwesomeIcon
-                  icon={faMapMarkedAlt}
-                  size="3x"
-                  className="mb-2"
-                />
-                {ADDRESS}
-              </a>
-              <a href={`tel:+${PHONE_NUMBER}`} className="card">
-                <FontAwesomeIcon icon={faPhone} size="3x" className="mb-2" />
-                {PHONE_NUMBER}
-              </a>
-              <a href={`mailto:${EMAIL}`} className="card">
-                <FontAwesomeIcon icon={faEnvelope} size="3x" className="mb-2" />
-                {EMAIL}
-              </a>
+              <div className="space-y-6">
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://goo.gl/maps/kuQhNUTh4LGPJDn48"
+                  className="card"
+                >
+                  <FontAwesomeIcon
+                    icon={faMapMarkedAlt}
+                    size="3x"
+                    className="mb-2"
+                  />
+                  {ADDRESS}
+                </a>
+                <a href={`tel:+${PHONE_NUMBER}`} className="card">
+                  <FontAwesomeIcon icon={faPhone} size="3x" className="mb-2" />
+                  {PHONE_NUMBER}
+                </a>
+                <a href={`mailto:${EMAIL}`} className="card">
+                  <FontAwesomeIcon
+                    icon={faEnvelope}
+                    size="3x"
+                    className="mb-2"
+                  />
+                  {EMAIL}
+                </a>
+              </div>
             </div>
           </div>
         </article>
