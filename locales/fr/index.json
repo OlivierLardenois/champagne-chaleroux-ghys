@@ -1,9 +1,13 @@
 {
+  "header": {
+    "logoAlt": "Logo de Champagne Chaléroux-Ghys"
+  },
   "homePage": {
     "title": "Accueil",
     "hero": {
       "title": "Champagne Chaléroux-Ghys",
-      "text": "Nous serons très heureux de vous accueillir à notre domaine pour vous faire déguster nos vins, visiter notre cave et vous présenter notre métier"
+      "text": "Nous serons très heureux de vous accueillir à notre domaine pour vous faire déguster nos vins, visiter notre cave et vous présenter notre métier",
+      "alt": "Bouteilles de champagne présentées dans la cave familiale"
     },
     "presentation": {
       "title": "Venez visiter notre vignoble et notre cave !",
@@ -15,7 +19,8 @@
     },
     "contact": {
       "title": "N’hésitez pas à nous contacter",
-      "text": "Notre activité commerciale est additionnelle de notre activité viticole. C’est pourquoi, afin de vous accueillir au mieux, nous vous prions de nous informer par mail ou par téléphone de votre venue."
+      "text": "Notre activité commerciale est additionnelle de notre activité viticole. C’est pourquoi, afin de vous accueillir au mieux, nous vous prions de nous informer par mail ou par téléphone de votre venue.",
+      "alt": "Le père et le fils Chaléroux-Ghys"
     }
   },
   "galleryPage": {
@@ -26,15 +31,18 @@
     "champagnes": {
       "brut": {
         "title": "Brut",
-        "text": "Cette cuvée est un assemblage de différents grands crus de la côte des blancs et de différentes années (50 % 2016 et 50% de vins de 2010 à 2015). La fermentation malolactique est réalisée. Le dosage est de 6 g/L avec du vin de 2013. Ce vin présente des arômes de citron caractéristiques des Champagne blanc de blancs et une saveur de pain de mie, de brioche."
+        "text": "Cette cuvée est un assemblage de différents grands crus de la côte des blancs et de différentes années (50 % 2016 et 50% de vins de 2010 à 2015). La fermentation malolactique est réalisée. Le dosage est de 6 g/L avec du vin de 2013. Ce vin présente des arômes de citron caractéristiques des Champagne blanc de blancs et une saveur de pain de mie, de brioche.",
+        "alt": "Bouteille de champagne brut Chaléroux-Ghys"
       },
       "millesime": {
         "title": "Millésime 2008",
-        "text": "Notre cuvée d’exception 100 % chardonnay. 2008 est reconnu comme un excellent millésime en Champagne. Malgré son âge, ce vin vous surprendra par sa fraîcheur. Au nez, ce sont les arômes de citron et de poire qui dominent. En bouche, ces arômes sont exacerbés par la tension du vin et le faible dosage (5g/L)."
+        "text": "Notre cuvée d’exception 100 % chardonnay. 2008 est reconnu comme un excellent millésime en Champagne. Malgré son âge, ce vin vous surprendra par sa fraîcheur. Au nez, ce sont les arômes de citron et de poire qui dominent. En bouche, ces arômes sont exacerbés par la tension du vin et le faible dosage (5g/L).",
+        "alt": "Bouteille de champagne millésime 2008 Chaléroux-Ghys"
       },
       "rose": {
         "title": "Rosé",
-        "text": "Cette cuvée est un assemblage de 40 % de pinot noir, 40 % de pinot meunier et 20 % de chardonnay.  Le vieillissement en cave est de 2 à 3 ans. Au nez, on distingue des notes de framboises et de fraises. En bouche, ces arômes sont accompagnés par une belle tension. Le dosage est de 6 g/L."
+        "text": "Cette cuvée est un assemblage de 40 % de pinot noir, 40 % de pinot meunier et 20 % de chardonnay.  Le vieillissement en cave est de 2 à 3 ans. Au nez, on distingue des notes de framboises et de fraises. En bouche, ces arômes sont accompagnés par une belle tension. Le dosage est de 6 g/L.",
+        "alt": "Bouteille de champagne rosé Chaléroux-Ghys"
       }
     }
   },

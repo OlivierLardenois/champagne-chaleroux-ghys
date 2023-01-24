@@ -1,5 +1,5 @@
 import { StaticImage } from "gatsby-plugin-image";
-import { Link, useI18next } from "gatsby-plugin-react-i18next";
+import { Link, useI18next, useTranslation } from "gatsby-plugin-react-i18next";
 import React, { useState } from "react";
 
 const Pages = [
@@ -139,11 +139,17 @@ type HeaderProps = {
 };
 
 export default function Header({ isMenuOpen, setIsMenuOpen }: HeaderProps) {
+  const { t } = useTranslation();
+
   return (
     <header className="text-white text-xl font-semibold bg-mainBlack">
       <div className="flex justify-between items-center py-3 px-12 max-w-6xl mx-auto">
         <Link to="/">
-          <StaticImage src="../images/logo.png" alt="" className="h-14 w-14" />{" "}
+          <StaticImage
+            src="../images/logo.png"
+            alt={t("header.logoAlt")}
+            className="h-14 w-14"
+          />
         </Link>
         <HeadersLinks />
         <HamburgerMenu isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />

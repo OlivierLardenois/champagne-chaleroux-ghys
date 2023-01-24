@@ -33,7 +33,7 @@ const IndexPage = () => {
         <ParallaxBannerLayer speed={-20}>
           <StaticImage
             src="../images/hero.jpg"
-            alt=""
+            alt={t("homePage.hero.alt")}
             layout="fullWidth"
             className="h-full"
           />
@@ -63,7 +63,7 @@ const IndexPage = () => {
           <div className="flex flex-col sm:flex-row space-y-6 sm:space-y-0 sm:space-x-10">
             <StaticImage
               src="../images/family.jpg"
-              alt=""
+              alt={t("homePage.contact.alt")}
               className="rounded-lg sm:min-w-[18rem] lg:min-w-[24rem]"
             />
             <div className="flex flex-col items-center space-y-6">

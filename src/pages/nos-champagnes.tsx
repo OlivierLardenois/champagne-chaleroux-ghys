@@ -15,7 +15,7 @@ export default function ProductsPage() {
         <article className="flex flex-col sm:flex-row bg-mainBlack rounded-xl text-white">
           <StaticImage
             src="../images/brut.jpg"
-            alt=""
+            alt={t("productsPage.champagnes.brut.alt")}
             className="shrink-0 sm:w-80 rounded-t-xl sm:rounded-tr-none sm:rounded-l-xl"
           />
           <div className="space-y-6 p-8">
@@ -34,14 +34,14 @@ export default function ProductsPage() {
           </div>
           <StaticImage
             src="../images/millesime.jpg"
-            alt=""
+            alt={t("productsPage.champagnes.millesime.alt")}
             className="shrink-0 sm:w-80 rounded-t-xl sm:rounded-tl-none sm:rounded-r-xl order-1 sm:order-2"
           />
         </article>
         <article className="flex flex-col sm:flex-row bg-mainBlack rounded-xl text-white">
           <StaticImage
             src="../images/rose.jpg"
-            alt=""
+            alt={t("productsPage.champagnes.rose.alt")}
             className="shrink-0 sm:w-80 rounded-t-xl sm:rounded-tr-none sm:rounded-l-xl"
           />
           <div className="space-y-6 p-8">
