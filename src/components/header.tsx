@@ -10,11 +10,14 @@ const Pages = [
 
 const HamburgerMenu = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { languages, language, originalPath, t } = useI18next();
 
   return (
-    <div className="flex lg:hidden">
+    <div className="flex lg:hidden z-10">
       <div
-        className="space-y-2 cursor-pointer z-20"
+        className={`${
+          isMenuOpen ? "fixed right-12 top-[1.8rem]" : ""
+        } z-10 space-y-2 cursor-pointer`}
         onClick={() => setIsMenuOpen(!isMenuOpen)}
       >
         <span
@@ -33,15 +36,48 @@ const HamburgerMenu = () => {
           }`}
         ></span>
       </div>
-      <div>
-        <div
-          className={`fixed inset-0 z-10 bg-mainBlack h-screen transition-transform ease-in-out duration-500 ${
-            isMenuOpen ? "translate-x-0" : "translate-x-full"
-          }`}
-        >
-          coucou
-        </div>
-      </div>
+      <nav
+        className={`fixed inset-0 bg-mainBlack h-screen transition-transform ease-in-out duration-500 ${
+          isMenuOpen ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
+        <ul className="flex flex-col justify-between items-center text-center py-20 px-12 h-full text-4xl">
+          {Pages.map((page) => (
+            <li key={page.key} className="hover:text-mainDarkBrown">
+              <Link to={page.to}>{t(page.key)}</Link>
+            </li>
+          ))}
+          <li>
+            <span>
+              <Link
+                to={originalPath}
+                language={languages[0]}
+                className={`${
+                  language === languages[0]
+                    ? "text-mainBrown cursor-default"
+                    : "hover:text-mainDarkBrown"
+                }`}
+              >
+                {languages[0].toUpperCase()}
+              </Link>
+            </span>
+            <span> / </span>
+            <span>
+              <Link
+                to={originalPath}
+                language={languages[1]}
+                className={`${
+                  language === languages[1]
+                    ? "text-mainBrown cursor-default"
+                    : "hover:text-mainDarkBrown"
+                }`}
+              >
+                {languages[1].toUpperCase()}
+              </Link>
+            </span>
+          </li>
+        </ul>
+      </nav>
     </div>
   );
 };
@@ -57,36 +93,36 @@ const HeadersLinks = () => {
             <Link to={page.to}>{t(page.key)}</Link>
           </li>
         ))}
+        <li>
+          <span>
+            <Link
+              to={originalPath}
+              language={languages[0]}
+              className={`${
+                language === languages[0]
+                  ? "text-mainBrown cursor-default"
+                  : "hover:text-mainDarkBrown"
+              }`}
+            >
+              {languages[0].toUpperCase()}
+            </Link>
+          </span>
+          <span> / </span>
+          <span>
+            <Link
+              to={originalPath}
+              language={languages[1]}
+              className={`${
+                language === languages[1]
+                  ? "text-mainBrown cursor-default"
+                  : "hover:text-mainDarkBrown"
+              }`}
+            >
+              {languages[1].toUpperCase()}
+            </Link>
+          </span>
+        </li>
       </ul>
-      <div>
-        <span key={languages[0]}>
-          <Link
-            to={originalPath}
-            language={languages[0]}
-            className={`${
-              language === languages[0]
-                ? "text-mainBrown cursor-default"
-                : "hover:text-mainDarkBrown"
-            }`}
-          >
-            {languages[0].toUpperCase()}
-          </Link>
-        </span>
-        <span> / </span>
-        <span key={languages[1]}>
-          <Link
-            to={originalPath}
-            language={languages[1]}
-            className={`${
-              language === languages[1]
-                ? "text-mainBrown cursor-default"
-                : "hover:text-mainDarkBrown"
-            }`}
-          >
-            {languages[1].toUpperCase()}
-          </Link>
-        </span>
-      </div>
     </nav>
   );
 };
