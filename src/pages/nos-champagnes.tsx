@@ -12,36 +12,42 @@ export default function ProductsPage() {
   return (
     <Layout>
       <section className="py-20 space-y-20 px-12 max-w-6xl mx-auto">
-        <article className="flex bg-mainBlack rounded-xl text-white">
+        <article className="flex flex-col sm:flex-row bg-mainBlack rounded-xl text-white">
           <StaticImage
             src="../images/brut.jpg"
             alt=""
-            className="shrink-0 w-80 lg:h-96 rounded-l-xl"
+            className="shrink-0 sm:w-80 rounded-t-xl sm:rounded-tr-none sm:rounded-l-xl"
           />
           <div className="space-y-6 p-8">
-            <h2>{t("productsPage.champagnes.brut.title")}</h2>
+            <h2 className="text-center sm:text-start">
+              {t("productsPage.champagnes.brut.title")}
+            </h2>
             <p>{t("productsPage.champagnes.brut.text")}</p>
           </div>
         </article>
-        <article className="flex bg-mainBlack rounded-xl text-white">
-          <div className="space-y-6 p-8">
-            <h2>{t("productsPage.champagnes.millesime.title")}</h2>
+        <article className="flex flex-col sm:flex-row bg-mainBlack rounded-xl text-white">
+          <div className="space-y-6 p-8 order-2 sm:order-1">
+            <h2 className="text-center sm:text-start">
+              {t("productsPage.champagnes.millesime.title")}
+            </h2>
             <p>{t("productsPage.champagnes.millesime.text")}</p>
           </div>
           <StaticImage
             src="../images/millesime.jpg"
             alt=""
-            className="shrink-0 w-80 lg:h-96 rounded-r-xl"
+            className="shrink-0 sm:w-80 rounded-t-xl sm:rounded-tl-none sm:rounded-r-xl order-1 sm:order-2"
           />
         </article>
-        <article className="flex bg-mainBlack rounded-xl text-white">
+        <article className="flex flex-col sm:flex-row bg-mainBlack rounded-xl text-white">
           <StaticImage
             src="../images/rose.jpg"
             alt=""
-            className="shrink-0 w-80 lg:h-96 rounded-l-xl"
+            className="shrink-0 sm:w-80 rounded-t-xl sm:rounded-tr-none sm:rounded-l-xl"
           />
           <div className="space-y-6 p-8">
-            <h2>{t("productsPage.champagnes.rose.title")}</h2>
+            <h2 className="text-center sm:text-start">
+              {t("productsPage.champagnes.rose.title")}
+            </h2>
             <p>{t("productsPage.champagnes.rose.text")}</p>
           </div>
         </article>
