@@ -4,7 +4,6 @@ import { useTranslation } from "gatsby-plugin-react-i18next";
 import * as React from "react";
 
 import Layout from "../components/layout";
-import Seo from "../components/seo";
 
 export default function GalleryPage({
   data,
@@ -19,7 +18,7 @@ export default function GalleryPage({
   });
 
   return (
-    <Layout>
+    <Layout pageKey="galleryPage" pathname={location.pathname}>
       <section className="flex flex-col sm:flex-row sm:space-x-2 space-y-2 sm:space-y-0 sm:py-2 max-w-6xl mx-auto">
         <div className="flex flex-col space-y-2">
           {images.map((image, i) => {
@@ -62,8 +61,6 @@ export default function GalleryPage({
     </Layout>
   );
 }
-
-export const Head = () => <Seo title="Home" />;
 
 export const GalleryPageQuery = graphql`
   query GalleryPage($language: String!) {

@@ -3,13 +3,12 @@ import { useTranslation } from "gatsby-plugin-react-i18next";
 import * as React from "react";
 
 import Layout from "../components/layout";
-import Seo from "../components/seo";
 
 export default function LegalPage() {
   const { t } = useTranslation();
 
   return (
-    <Layout>
+    <Layout pageKey="legalPage" pathname={location.pathname}>
       <section className="space-y-20 custom-container">
         <article className="space-y-8">
           <h2>{t("legalPage.editor.title")}</h2>
@@ -41,8 +40,6 @@ export default function LegalPage() {
     </Layout>
   );
 }
-
-export const Head = () => <Seo title="Home" />;
 
 export const query = graphql`
   query ($language: String!) {

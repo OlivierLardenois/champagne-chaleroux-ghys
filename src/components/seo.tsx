@@ -1,50 +1,60 @@
-/**
- * SEO component that queries for data with
- * Gatsby's useStaticQuery React hook
- *
- * See: https://www.gatsbyjs.com/docs/how-to/querying-data/use-static-query/
- */
-
+import { graphql, useStaticQuery } from "gatsby";
+import { Helmet } from "react-helmet";
 import * as React from "react";
-import { useStaticQuery, graphql } from "gatsby";
+import { useI18next } from "gatsby-plugin-react-i18next";
 
 type SeoProps = {
-  description?: string;
-  title?: string;
+  description: string;
+  title: string;
+  pathname: string;
   children?: React.ReactNode;
 };
 
-function Seo({ description, title, children }: SeoProps) {
-  const { site } = useStaticQuery(
+// https://github.com/gatsbyjs/gatsby/issues/36458
+function Seo({ description, title, pathname, children }: SeoProps) {
+  const { language } = useI18next();
+
+  const data = useStaticQuery<Queries.SeoQueryQuery>(
     graphql`
-      query {
+      query SeoQuery {
         site {
           siteMetadata {
-            title
             description
-            author
+            siteUrl
+            title
+          }
+        }
+        ogImage: file(relativePath: { eq: "hero.jpg" }) {
+          childImageSharp {
+            gatsbyImageData(height: 630, width: 1200)
           }
         }
       }
     `
   );
 
-  const metaDescription = description || site.siteMetadata.description;
-  const defaultTitle = site.siteMetadata?.title;
+  const siteUrl = data.site?.siteMetadata?.siteUrl!;
+  const ogImage = data.ogImage?.childImageSharp?.gatsbyImageData!;
+
+  const seo = {
+    title,
+    description,
+    image: `${siteUrl}${ogImage.images.fallback?.src}`,
+    url: `${siteUrl}${pathname}`,
+  };
 
   return (
-    <>
-      <title>{defaultTitle ? `${title} | ${defaultTitle}` : title}</title>
-      <meta name="description" content={metaDescription} />
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={metaDescription} />
+    <Helmet>
+      <html lang={language} />
+      <title>{seo.title}</title>
+      <meta name="description" content={seo.description} />
       <meta property="og:type" content="website" />
-      <meta name="twitter:card" content="summary" />
-      <meta name="twitter:creator" content={site.siteMetadata?.author || ``} />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={metaDescription} />
+      <meta property="og:url" content={seo.url} />
+      <meta property="og:title" content={seo.title} />
+      <meta property="og:description" content={seo.description} />
+      <meta property="og:image" content={seo.image} />
       {children}
-    </>
+    </Helmet>
   );
 }
 

@@ -11,16 +11,14 @@ import * as React from "react";
 import { ParallaxBanner, ParallaxBannerLayer } from "react-scroll-parallax";
 
 import Layout from "../components/layout";
-import Seo from "../components/seo";
 
 /** TODO
- * Alt images
  * SEO component
  * Analytics
  * Perf test
  */
 
-const IndexPage = () => {
+const HomePage = () => {
   const { t } = useTranslation();
 
   const ADDRESS = "10 Rue des Gris, 51190 Avize";
@@ -28,7 +26,7 @@ const IndexPage = () => {
   const PHONE_NUMBER = "06 48 71 50 64";
 
   return (
-    <Layout>
+    <Layout pageKey="homePage" pathname={location.pathname}>
       <ParallaxBanner className="h-[92vh] sm:h-[32rem]">
         <ParallaxBannerLayer speed={-20}>
           <StaticImage
@@ -53,8 +51,8 @@ const IndexPage = () => {
               t("homePage.presentation.text", {
                 returnObjects: true,
               }) as string[]
-            ).map((p) => (
-              <p>{p}</p>
+            ).map((p, i) => (
+              <p key={i}>{p}</p>
             ))}
           </div>
         </article>
@@ -103,14 +101,7 @@ const IndexPage = () => {
   );
 };
 
-/**
- * Head export to define metadata for the page
- *
- * See: https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/
- */
-export const Head = () => <Seo title="Home" />;
-
-export default IndexPage;
+export default HomePage;
 
 export const query = graphql`
   query ($language: String!) {

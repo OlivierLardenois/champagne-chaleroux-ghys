@@ -1,6 +1,6 @@
 import { StaticImage } from "gatsby-plugin-image";
 import { Link, useI18next, useTranslation } from "gatsby-plugin-react-i18next";
-import React, { useState } from "react";
+import React from "react";
 
 const Pages = [
   { key: "homePage.title", to: "/" },

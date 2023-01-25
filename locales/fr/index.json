@@ -4,6 +4,10 @@
   },
   "homePage": {
     "title": "Accueil",
+    "seo": {
+      "title": "Accueil",
+      "description": "Bienvenue chez la maison Chaléroux-Ghys, vignoble « Grands Cru » blanc de blanc situé à Avize"
+    },
     "hero": {
       "title": "Champagne Chaléroux-Ghys",
       "text": "Nous serons très heureux de vous accueillir à notre domaine pour vous faire déguster nos vins, visiter notre cave et vous présenter notre métier",
@@ -25,6 +29,10 @@
   },
   "galleryPage": {
     "title": "Galerie",
+    "seo": {
+      "title": "Galerie",
+      "description": "Visitez notre vignoble « Grands Cru » blanc de blanc situé à Avize ainsi que notre magnifique cave"
+    },
     "alts": [
       "Cave familiale avec des bouteilles sur lattes",
       "Entrée de la cave familiale",
@@ -40,6 +48,10 @@
   },
   "productsPage": {
     "title": "Nos champagnes",
+    "seo": {
+      "title": "Nos champagnes",
+      "description": "Découvrez nos Champagnes issus du vignoble « Grands Cru » blanc de blanc situé à Avize"
+    },
     "champagnes": {
       "brut": {
         "title": "Brut",
@@ -60,6 +72,10 @@
   },
   "legalPage": {
     "title": "Mentions légales",
+    "seo": {
+      "title": "Mentions légales",
+      "description": "Mentions légales du site Chaléroux-Ghys"
+    },
     "editor": {
       "title": "Ce site est édité par :",
       "address": "EARL Michel Ghys dont le siège social est situé à 10 Rue des Gris, 51190 Avize",

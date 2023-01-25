@@ -2,13 +2,11 @@ import { GatsbyConfig } from "gatsby";
 
 const gatsbyConfig: GatsbyConfig = {
   siteMetadata: {
-    title: "Champagne Chaléroux-Ghys",
-    description: "",
-    author: "",
     siteUrl: "https://champagnechalerouxghys.fr/",
   },
   graphqlTypegen: true,
   plugins: [
+    "gatsby-plugin-react-helmet",
     "gatsby-plugin-postcss",
     {
       resolve: "gatsby-source-filesystem",

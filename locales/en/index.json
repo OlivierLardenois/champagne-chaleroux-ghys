@@ -4,6 +4,10 @@
   },
   "homePage": {
     "title": "Home",
+    "seo": {
+      "title": "Home",
+      "description": "Welome to the Chaléroux-Ghys House, \"Grand Cru blanc de blanc\" vineyard located in Avize"
+    },
     "hero": {
       "title": "Champagne Chaléroux-Ghys",
       "text": "We would be happy to welcome you personally in our estate for tasting but also to visit our cellar and share our passion",
@@ -25,6 +29,10 @@
   },
   "galleryPage": {
     "title": "Gallery",
+    "seo": {
+      "title": "Gallery",
+      "description": "Visit our \"Grand Cru blanc de blanc\" vineyard located in Avize and our amazing cellar"
+    },
     "alts": [
       "Family cellar with bottles on slats",
       "Entrance to the family cellar",
@@ -40,6 +48,10 @@
   },
   "productsPage": {
     "title": "Our champagnes",
+    "seo": {
+      "title": "Our champagnes",
+      "description": "Welome to the Chaléroux-Ghys House, \"Grand Cru blanc de blanc\" vineyard located in Avize"
+    },
     "champagnes": {
       "brut": {
         "title": "Brut",
@@ -60,6 +72,10 @@
   },
   "legalPage": {
     "title": "Legal Terms",
+    "seo": {
+      "title": "Legal Terms",
+      "description": "Chaléroux-Ghys website legal terms"
+    },
     "editor": {
       "title": "This webiste is edited by:",
       "address": "EARL Michel Ghys located at 10 Rue des Gris, 51190 Avize",
