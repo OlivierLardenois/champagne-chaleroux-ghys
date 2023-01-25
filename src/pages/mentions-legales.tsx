@@ -10,6 +10,7 @@ export default function LegalPage() {
   return (
     <Layout pageKey="legalPage" pathname={location.pathname}>
       <section className="space-y-20 custom-container">
+        <h1 className="text-center">{t("legalPage.title")}</h1>
         <article className="space-y-8">
           <h2>{t("legalPage.editor.title")}</h2>
           <p>

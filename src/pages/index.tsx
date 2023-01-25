@@ -13,7 +13,6 @@ import { ParallaxBanner, ParallaxBannerLayer } from "react-scroll-parallax";
 import Layout from "../components/layout";
 
 /** TODO
- * SEO component
  * Analytics
  * Perf test
  */
@@ -37,7 +36,9 @@ const HomePage = () => {
           />
         </ParallaxBannerLayer>
         <div className="absolute inset-0 flex flex-col text-center sm:text-start justify-center px-6 max-w-6xl mx-auto">
-          <h1 className="sm:w-1/2 mb-10">{t("homePage.hero.title")}</h1>
+          <h1 className="sm:w-1/2 mb-10 text-white">
+            {t("homePage.hero.title")}
+          </h1>
           <p className="sm:w-1/2 text-white text-lg font-medium">
             {t("homePage.hero.text")}
           </p>

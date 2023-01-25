@@ -11,6 +11,7 @@ export default function ProductsPage() {
   return (
     <Layout pageKey="productsPage" pathname={location.pathname}>
       <section className="space-y-20 custom-container">
+        <h1 className="text-center">{t("productsPage.title")}</h1>
         <article className="flex flex-col sm:flex-row bg-mainBlack rounded-xl text-white">
           <StaticImage
             src="../images/brut.jpg"
