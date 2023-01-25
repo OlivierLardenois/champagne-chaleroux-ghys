@@ -5,7 +5,7 @@
   "homePage": {
     "title": "Accueil",
     "seo": {
-      "title": "Accueil",
+      "title": "Champagne Chaléroux-Ghys | Maison situé à Avize",
       "description": "Bienvenue chez la maison Chaléroux-Ghys, vignoble « Grands Cru » blanc de blanc situé à Avize"
     },
     "hero": {
@@ -30,7 +30,7 @@
   "galleryPage": {
     "title": "Galerie",
     "seo": {
-      "title": "Galerie",
+      "title": "Découvrez notre maison | Champagne Chaléroux-Ghys",
       "description": "Visitez notre vignoble « Grands Cru » blanc de blanc situé à Avize ainsi que notre magnifique cave"
     },
     "alts": [
@@ -42,14 +42,14 @@
       "Cuverie",
       "Machine de tirage",
       "Fût de champagne Chaléroux-Ghys",
-      "Vignes",
-      "Vignes"
+      "Vignes à Avize",
+      "Vignes à Avize"
     ]
   },
   "productsPage": {
     "title": "Nos champagnes",
     "seo": {
-      "title": "Nos champagnes",
+      "title": "Nos champagnes | Champagne Chaléroux-Ghys",
       "description": "Découvrez nos Champagnes issus du vignoble « Grands Cru » blanc de blanc situé à Avize"
     },
     "champagnes": {
@@ -73,7 +73,7 @@
   "legalPage": {
     "title": "Mentions légales",
     "seo": {
-      "title": "Mentions légales",
+      "title": "Mentions légales | Champagne Chaléroux-Ghys",
       "description": "Mentions légales du site Chaléroux-Ghys"
     },
     "editor": {

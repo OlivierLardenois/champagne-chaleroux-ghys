@@ -14,9 +14,9 @@ type SeoProps = {
 function Seo({ description, title, pathname, children }: SeoProps) {
   const { language } = useI18next();
 
-  const data = useStaticQuery<Queries.SeoQueryQuery>(
+  const data = useStaticQuery<Queries.SeoComponentQuery>(
     graphql`
-      query SeoQuery {
+      query SeoComponent {
         site {
           siteMetadata {
             description
@@ -53,6 +53,8 @@ function Seo({ description, title, pathname, children }: SeoProps) {
       <meta property="og:title" content={seo.title} />
       <meta property="og:description" content={seo.description} />
       <meta property="og:image" content={seo.image} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
       {children}
     </Helmet>
   );

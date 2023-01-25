@@ -5,7 +5,7 @@
   "homePage": {
     "title": "Home",
     "seo": {
-      "title": "Home",
+      "title": "Champagne Chaléroux-Ghys | Producer located in Avize",
       "description": "Welome to the Chaléroux-Ghys House, \"Grand Cru blanc de blanc\" vineyard located in Avize"
     },
     "hero": {
@@ -30,7 +30,7 @@
   "galleryPage": {
     "title": "Gallery",
     "seo": {
-      "title": "Gallery",
+      "title": "Visit our house | Champagne Chaléroux-Ghys",
       "description": "Visit our \"Grand Cru blanc de blanc\" vineyard located in Avize and our amazing cellar"
     },
     "alts": [
@@ -42,14 +42,14 @@
       "Winery",
       "Bottling",
       "Chaléroux-Ghys champagne cask",
-      "Vineyards",
-      "Vineyards"
+      "Vineyards in Avize",
+      "Vineyards in Avize"
     ]
   },
   "productsPage": {
     "title": "Our champagnes",
     "seo": {
-      "title": "Our champagnes",
+      "title": "Our champagnes | Champagne Chaléroux-Ghys",
       "description": "Welome to the Chaléroux-Ghys House, \"Grand Cru blanc de blanc\" vineyard located in Avize"
     },
     "champagnes": {
@@ -73,7 +73,7 @@
   "legalPage": {
     "title": "Legal Terms",
     "seo": {
-      "title": "Legal Terms",
+      "title": "Legal Terms | Champagne Chaléroux-Ghys",
       "description": "Chaléroux-Ghys website legal terms"
     },
     "editor": {
