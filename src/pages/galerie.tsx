@@ -7,6 +7,7 @@ import Layout from "../components/layout";
 
 export default function GalleryPage({
   data,
+  location,
 }: PageProps<Queries.GalleryPageQuery>) {
   const { t } = useTranslation();
 

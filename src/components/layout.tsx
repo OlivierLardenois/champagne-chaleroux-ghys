@@ -11,7 +11,7 @@ type LayoutProps = {
   children?: React.ReactNode;
 };
 
-const Layout = ({ pageKey, pathname, children }: LayoutProps) => {
+export default function Layout({ pageKey, pathname, children }: LayoutProps) {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const { t } = useTranslation();
 
@@ -31,6 +31,6 @@ const Layout = ({ pageKey, pathname, children }: LayoutProps) => {
       <Footer />
     </div>
   );
-};
+}
 
-export default Layout;
+Layout;

@@ -1,11 +1,11 @@
-import { graphql } from "gatsby";
+import { graphql, PageProps } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import { useTranslation } from "gatsby-plugin-react-i18next";
 import * as React from "react";
 
 import Layout from "../components/layout";
 
-export default function ProductsPage() {
+export default function ProductsPage({ location }: PageProps) {
   const { t } = useTranslation();
 
   return (

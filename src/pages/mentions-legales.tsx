@@ -1,10 +1,10 @@
-import { graphql } from "gatsby";
+import { graphql, PageProps } from "gatsby";
 import { useTranslation } from "gatsby-plugin-react-i18next";
 import * as React from "react";
 
 import Layout from "../components/layout";
 
-export default function LegalPage() {
+export default function LegalPage({ location }: PageProps) {
   const { t } = useTranslation();
 
   return (

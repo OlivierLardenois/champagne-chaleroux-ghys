@@ -4,7 +4,7 @@ import {
   faPhone,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { graphql } from "gatsby";
+import { graphql, PageProps } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import { useTranslation } from "gatsby-plugin-react-i18next";
 import * as React from "react";
@@ -17,7 +17,7 @@ import Layout from "../components/layout";
  * Perf test
  */
 
-const HomePage = () => {
+export default function HomePage({ location }: PageProps) {
   const { t } = useTranslation();
 
   const ADDRESS = "10 Rue des Gris, 51190 Avize";
@@ -100,9 +100,7 @@ const HomePage = () => {
       </section>
     </Layout>
   );
-};
-
-export default HomePage;
+}
 
 export const query = graphql`
   query ($language: String!) {

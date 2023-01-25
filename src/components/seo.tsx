@@ -11,7 +11,12 @@ type SeoProps = {
 };
 
 // https://github.com/gatsbyjs/gatsby/issues/36458
-function Seo({ description, title, pathname, children }: SeoProps) {
+export default function Seo({
+  description,
+  title,
+  pathname,
+  children,
+}: SeoProps) {
   const { language } = useI18next();
 
   const data = useStaticQuery<Queries.SeoComponentQuery>(
@@ -59,5 +64,3 @@ function Seo({ description, title, pathname, children }: SeoProps) {
     </Helmet>
   );
 }
-
-export default Seo;
