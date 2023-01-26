@@ -6,6 +6,15 @@ const gatsbyConfig: GatsbyConfig = {
   },
   graphqlTypegen: true,
   plugins: [
+    {
+      resolve: "gatsby-plugin-google-gtag",
+      options: {
+        trackingIds: ["G-XTSVQGP2FS"],
+        pluginConfig: {
+          head: true,
+        },
+      },
+    },
     "gatsby-plugin-sitemap",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-postcss",

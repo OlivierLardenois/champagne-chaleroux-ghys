@@ -1,6 +1,6 @@
 import { useTranslation } from "gatsby-plugin-react-i18next";
-
 import * as React from "react";
+
 import Footer from "./footer";
 import Header from "./header";
 import Seo from "./seo";
