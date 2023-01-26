@@ -19,7 +19,7 @@ const gatsbyConfig: GatsbyConfig = {
     {
       resolve: "gatsby-plugin-react-i18next",
       options: {
-        languages: ["en", "fr"],
+        languages: ["fr", "en"],
         defaultLanguage: "fr",
         siteUrl: "https://champagnechalerouxghys.fr/",
         // if you are using trailingSlash gatsby config include it here, as well (the default is 'always')
