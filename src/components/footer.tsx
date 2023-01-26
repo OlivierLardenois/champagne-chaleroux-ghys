@@ -19,6 +19,7 @@ export default function Footer() {
           target="_blank"
           rel="noopener noreferrer"
           className="hover:text-mainDarkBrown"
+          aria-label="Champagne Chaléroux-Ghys instagram"
         >
           <FontAwesomeIcon icon={faInstagram} size="2x" />
         </a>
