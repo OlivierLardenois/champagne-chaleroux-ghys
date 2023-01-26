@@ -36,6 +36,7 @@ export default function GalleryPage({
                 image={gatsbyImageData}
                 alt={t(`galleryPage.alts.${i}`)}
                 className="h-1/5"
+                key={i}
               />
             );
           })}
@@ -54,6 +55,7 @@ export default function GalleryPage({
                 image={gatsbyImageData}
                 alt={t(`galleryPage.alts.${i}`)}
                 className="h-1/5"
+                key={i}
               />
             );
           })}
