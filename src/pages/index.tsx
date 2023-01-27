@@ -13,8 +13,7 @@ import { ParallaxBanner, ParallaxBannerLayer } from "react-scroll-parallax";
 import Layout from "../components/layout";
 
 /** TODO
- * Analytics
- * Perf test
+ * cookie banner GA4
  */
 
 export default function HomePage({ location }: PageProps) {
@@ -81,7 +80,10 @@ export default function HomePage({ location }: PageProps) {
                   />
                   {ADDRESS}
                 </a>
-                <a href={`tel:+${PHONE_NUMBER}`} className="card">
+                <a
+                  href={`tel:+${PHONE_NUMBER.replace(/\s/g, "")}`}
+                  className="card"
+                >
                   <FontAwesomeIcon icon={faPhone} size="3x" className="mb-2" />
                   {PHONE_NUMBER}
                 </a>
