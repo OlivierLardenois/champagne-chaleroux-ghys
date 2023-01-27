@@ -15,7 +15,40 @@ const gatsbyConfig: GatsbyConfig = {
         },
       },
     },
-    "gatsby-plugin-sitemap",
+    {
+      resolve: "gatsby-plugin-sitemap",
+      // https://developers.google.com/search/docs/advanced/crawling/localized-versions?hl=fr#sitemap
+      options: {
+        excludes: ["/**/404", "/**/404.html"],
+        query: `
+        {
+          site {
+            siteMetadata {
+              siteUrl
+            }
+          }
+          allSitePage {
+            nodes {
+              path
+            }
+          }
+        }
+      `,
+        resolvePages: (data: any) =>
+          data.allSitePage.nodes.map((node: any) => ({
+            siteUrl: data.site.siteMetadata.siteUrl,
+            ...node,
+          })),
+        serialize: (x: any) => ({
+          url: x.siteUrl + x.path,
+          links: [
+            { lang: "fr", url: x.siteUrl + x.path },
+            { lang: "en", url: `${x.siteUrl}/en${x.path}` },
+            { lang: "x-default", url: x.siteUrl + x.path },
+          ],
+        }),
+      },
+    },
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-postcss",
     {

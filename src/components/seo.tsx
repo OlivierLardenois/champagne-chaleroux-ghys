@@ -75,7 +75,6 @@ export default function Seo({
         hrefLang="x-default"
         href={`${siteUrl}${pathname.replace("/en", "")}`}
       />
-
       {children}
     </Helmet>
   );
