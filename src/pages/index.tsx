@@ -34,15 +34,15 @@ export default function HomePage({ location }: PageProps) {
             className="h-full"
           />
         </ParallaxBannerLayer>
-        <div className="absolute inset-0 flex flex-col text-center sm:text-start justify-center px-6 max-w-6xl mx-auto">
-          <h1 className="sm:w-1/2 mb-10 text-white">
-            {t("homePage.hero.title")}
-          </h1>
-          <p className="sm:w-1/2 text-white text-lg font-medium">
-            {t("homePage.hero.text")}
-          </p>
-        </div>
       </ParallaxBanner>
+      <div className="absolute inset-0 flex flex-col h-[92vh] sm:h-[32rem] text-center sm:text-start justify-center px-6 max-w-6xl mx-auto">
+        <h1 className="sm:w-1/2 mb-10 text-white">
+          {t("homePage.hero.title")}
+        </h1>
+        <p className="sm:w-1/2 text-white text-lg font-medium">
+          {t("homePage.hero.text")}
+        </p>
+      </div>
       <section className="space-y-20 custom-container">
         <article className="space-y-8">
           <h2>{t("homePage.presentation.title")}</h2>

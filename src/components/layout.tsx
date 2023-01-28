@@ -27,7 +27,7 @@ export default function Layout({ pageKey, pathname, children }: LayoutProps) {
         pathname={pathname}
       />
       <Header isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
-      <main className="grow">{children}</main>
+      <main className="relative grow">{children}</main>
       <Footer />
     </div>
   );
