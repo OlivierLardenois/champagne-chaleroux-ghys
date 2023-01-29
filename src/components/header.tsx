@@ -8,13 +8,49 @@ const Pages = [
   { key: "galleryPage.title", to: "/galerie/" },
 ];
 
+const LanguageSwitcher = () => {
+  const { languages, language, originalPath } = useI18next();
+
+  return (
+    <>
+      <span>
+        <Link
+          to={originalPath}
+          language={languages[0]}
+          className={`${
+            language === languages[0]
+              ? "text-mainBrown cursor-default"
+              : "hover:text-mainDarkBrown"
+          }`}
+        >
+          {languages[0].toUpperCase()}
+        </Link>
+      </span>
+      <span> / </span>
+      <span>
+        <Link
+          to={originalPath}
+          language={languages[1]}
+          className={`${
+            language === languages[1]
+              ? "text-mainBrown cursor-default"
+              : "hover:text-mainDarkBrown"
+          }`}
+        >
+          {languages[1].toUpperCase()}
+        </Link>
+      </span>
+    </>
+  );
+};
+
 type HamburgerMenuProps = {
   isMenuOpen: boolean;
   setIsMenuOpen: Function;
 };
 
 const HamburgerMenu = ({ isMenuOpen, setIsMenuOpen }: HamburgerMenuProps) => {
-  const { languages, language, originalPath, t } = useI18next();
+  const { t } = useTranslation();
 
   return (
     <div className="flex lg:hidden z-10">
@@ -52,34 +88,8 @@ const HamburgerMenu = ({ isMenuOpen, setIsMenuOpen }: HamburgerMenuProps) => {
                 <Link to={page.to}>{t(page.key)}</Link>
               </li>
             ))}
-            <li>
-              <span>
-                <Link
-                  to={originalPath}
-                  language={languages[0]}
-                  className={`${
-                    language === languages[0]
-                      ? "text-mainBrown cursor-default"
-                      : "hover:text-mainDarkBrown"
-                  }`}
-                >
-                  {languages[0].toUpperCase()}
-                </Link>
-              </span>
-              <span> / </span>
-              <span>
-                <Link
-                  to={originalPath}
-                  language={languages[1]}
-                  className={`${
-                    language === languages[1]
-                      ? "text-mainBrown cursor-default"
-                      : "hover:text-mainDarkBrown"
-                  }`}
-                >
-                  {languages[1].toUpperCase()}
-                </Link>
-              </span>
+            <li key={"LanguageSwitcher"}>
+              <LanguageSwitcher />
             </li>
           </ul>
         </div>
@@ -89,7 +99,7 @@ const HamburgerMenu = ({ isMenuOpen, setIsMenuOpen }: HamburgerMenuProps) => {
 };
 
 const HeadersLinks = () => {
-  const { languages, language, originalPath, t } = useI18next();
+  const { t } = useTranslation();
 
   return (
     <nav className="hidden lg:flex space-x-12">
@@ -99,34 +109,8 @@ const HeadersLinks = () => {
             <Link to={page.to}>{t(page.key)}</Link>
           </li>
         ))}
-        <li>
-          <span>
-            <Link
-              to={originalPath}
-              language={languages[0]}
-              className={`${
-                language === languages[0]
-                  ? "text-mainBrown cursor-default"
-                  : "hover:text-mainDarkBrown"
-              }`}
-            >
-              {languages[0].toUpperCase()}
-            </Link>
-          </span>
-          <span> / </span>
-          <span>
-            <Link
-              to={originalPath}
-              language={languages[1]}
-              className={`${
-                language === languages[1]
-                  ? "text-mainBrown cursor-default"
-                  : "hover:text-mainDarkBrown"
-              }`}
-            >
-              {languages[1].toUpperCase()}
-            </Link>
-          </span>
+        <li key="LanguageSwitcher">
+          <LanguageSwitcher />
         </li>
       </ul>
     </nav>
