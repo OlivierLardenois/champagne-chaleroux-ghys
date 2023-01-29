@@ -12,19 +12,11 @@ import { ParallaxBanner, ParallaxBannerLayer } from "react-scroll-parallax";
 
 import Layout from "../components/layout";
 
-/** TODO
- * cookie banner GA4
- */
-
-export default function HomePage({ location }: PageProps) {
+const HeroBanner = () => {
   const { t } = useTranslation();
 
-  const ADDRESS = "10 Rue des Gris, 51190 Avize";
-  const EMAIL = "earl.ghys@wanadoo.fr";
-  const PHONE_NUMBER = "06 48 71 50 64";
-
   return (
-    <Layout pageKey="homePage" pathname={location.pathname}>
+    <>
       <ParallaxBanner className="h-[92vh] sm:h-[32rem]">
         <ParallaxBannerLayer speed={-20}>
           <StaticImage
@@ -43,6 +35,20 @@ export default function HomePage({ location }: PageProps) {
           {t("homePage.hero.text")}
         </p>
       </div>
+    </>
+  );
+};
+
+export default function HomePage({ location }: PageProps) {
+  const { t } = useTranslation();
+
+  const ADDRESS = "10 Rue des Gris, 51190 Avize";
+  const EMAIL = "earl.ghys@wanadoo.fr";
+  const PHONE_NUMBER = "06 48 71 50 64";
+
+  return (
+    <Layout pageKey="homePage" pathname={location.pathname}>
+      <HeroBanner />
       <section className="space-y-20 custom-container">
         <article className="space-y-8">
           <h2>{t("homePage.presentation.title")}</h2>
