@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "chmpagne-chaleroux-ghys",
   "private": true,
-  "description": "",
-  "version": "0.1.0",
+  "description": "Website for Chaléroux-Ghys champagne house",
+  "version": "1.0.0",
   "author": "Olivier Lardenois <olardenois@gmail.com>",
   "dependencies": {
     "@fontsource/open-sans": "^4.5.14",
