@@ -32,5 +32,3 @@ export default function Layout({ pageKey, pathname, children }: LayoutProps) {
     </div>
   );
 }
-
-Layout;

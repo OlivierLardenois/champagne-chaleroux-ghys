@@ -1,7 +1,7 @@
 import { graphql, useStaticQuery } from "gatsby";
-import { Helmet } from "react-helmet";
-import * as React from "react";
 import { useI18next } from "gatsby-plugin-react-i18next";
+import * as React from "react";
+import { Helmet } from "react-helmet";
 
 type SeoProps = {
   description: string;
