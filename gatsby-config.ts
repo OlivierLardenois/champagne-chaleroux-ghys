@@ -13,6 +13,11 @@ const gatsbyConfig: GatsbyConfig = {
         pluginConfig: {
           head: true,
         },
+        gtagConfig: {
+          // Privacy settings
+          anonymize_ip: true,
+          cookie_expires: 63072000, // 2 years
+        },
       },
     },
     {

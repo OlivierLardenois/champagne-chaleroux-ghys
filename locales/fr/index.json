@@ -8,6 +8,12 @@
     "yes": "Oui",
     "no": "Non"
   },
+  "cookieConsent": {
+    "title": "Gestion des cookies",
+    "message": "Nous utilisons des cookies pour améliorer votre expérience de navigation et analyser le trafic de notre site web. Vous pouvez accepter tous les cookies ou choisir uniquement les cookies essentiels.",
+    "acceptAll": "Accepter tous",
+    "necessary": "Cookies essentiels"
+  },
   "homePage": {
     "title": "Accueil",
     "seo": {

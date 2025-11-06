@@ -2,6 +2,7 @@ import { useTranslation } from "gatsby-plugin-react-i18next";
 import * as React from "react";
 
 import AgeVerificationBanner from "./ageVerificationBanner";
+import CookieBanner from "./cookieBanner";
 import Footer from "./footer";
 import Header from "./header";
 import Seo from "./seo";
@@ -31,6 +32,7 @@ export default function Layout({ pageKey, pathname, children }: LayoutProps) {
       <Header isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
       <main className="relative grow">{children}</main>
       <Footer />
+      <CookieBanner />
     </div>
   );
 }
