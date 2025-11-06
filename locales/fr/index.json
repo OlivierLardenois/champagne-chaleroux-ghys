@@ -2,6 +2,12 @@
   "header": {
     "logoAlt": "Logo de Champagne Chaléroux-Ghys"
   },
+  "ageVerification": {
+    "title": "Vérification d'âge",
+    "message": "Ce site est réservé aux personnes majeures (18+). Êtes-vous âgé(e) de plus de 18 ans ?",
+    "yes": "Oui",
+    "no": "Non"
+  },
   "homePage": {
     "title": "Accueil",
     "seo": {

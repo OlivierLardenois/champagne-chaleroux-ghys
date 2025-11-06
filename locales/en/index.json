@@ -2,6 +2,12 @@
   "header": {
     "logoAlt": "Champagne Chaléroux-Ghys logo"
   },
+  "ageVerification": {
+    "title": "Age Verification",
+    "message": "This site is reserved for adults (18+). Are you over 18 years old?",
+    "yes": "Yes",
+    "no": "No"
+  },
   "homePage": {
     "title": "Home",
     "seo": {

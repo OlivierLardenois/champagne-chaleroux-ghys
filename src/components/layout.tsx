@@ -1,6 +1,7 @@
 import { useTranslation } from "gatsby-plugin-react-i18next";
 import * as React from "react";
 
+import AgeVerificationBanner from "./ageVerificationBanner";
 import Footer from "./footer";
 import Header from "./header";
 import Seo from "./seo";
@@ -21,6 +22,7 @@ export default function Layout({ pageKey, pathname, children }: LayoutProps) {
         isMenuOpen ? "h-screen overflow-hidden" : ""
       }`}
     >
+      <AgeVerificationBanner />
       <Seo
         title={t(`${pageKey}.seo.title`)}
         description={t(`${pageKey}.seo.description`)}
